@@ -12,6 +12,7 @@ app.use("/api", v1WorkoutRouter);
 
 app.get("/", (req, res) => {
   const appURL = req.protocol + "://" + req.get("host")+"/api";
+
   const htmlContent = `
     <div>
       <b>
