@@ -6,6 +6,49 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello Welocme to Rest API</h1>
+    <h1>Hello Welcome to Rest API</h1>
+    <a href="/ss">GET REST API List</a>
+
+    <div>
+        <b>
+            <a href="#" id="userIdLink">/userId</a>
+        </b>
+        <br></br>
+        <b>
+            <a href="#" id="teamsLink">/teams</a>
+        </b>
+        <br></br>
+        <b>
+            <a href="#" id="statusLink">/status</a>
+        </b>
+        <br></br>
+        <b>
+            <a href="#" id="CardLink">/Card</a>
+        </b>
+        <br></br>
+        <b>
+            <a href="#" id="getCardLink">/getCard</a>
+        </b>
+    </div>
+
+    <!-- JavaScript code -->
+    <script>
+        // Example JavaScript code to make an AJAX request
+        document.getElementById("userIdLink").addEventListener("click", function(event) {
+            event.preventDefault();
+            // Make an AJAX request to your Node.js server's /userId route
+            fetch("/api/userId")
+                .then(response => response.json())
+                .then(data => {
+                    alert("Response from /userId: " + JSON.stringify(data));
+                    console.log('data',data)
+                })
+                .catch(error => {
+                    console.error("Error: " + error);
+                });
+        });
+
+        // You can add similar event listeners and AJAX requests for other links
+    </script>
 </body>
 </html>
