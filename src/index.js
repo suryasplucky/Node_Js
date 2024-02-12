@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const v1WorkoutRouter = require("./v1/routes/workoutRoutes");
+const v1WorkoutRouter = require("./v1/routes/userRoutes");
 
 
 const app = express();
@@ -16,23 +16,7 @@ app.get("/", (req, res) => {
   const htmlContent = `
     <div>
       <b>
-        <a href="${appURL}/userId">/userId</a>
-      </b>
-      <br></br>
-      <b>
-        <a href="${appURL}/teams">/teams</a>
-      </b>
-      <br></br>
-      <b>
-        <a href="${appURL}/status">/status</a>
-      </b>
-      <br></br>
-      <b>
-        <a href="${appURL}/Card">/Card</a>
-      </b>
-      <br></br>
-      <b>
-        <a href="${appURL}/getCard">/getCard</a>
+        <a href="${appURL}/getusers">/userList</a>
       </b>
     </div>
   `;

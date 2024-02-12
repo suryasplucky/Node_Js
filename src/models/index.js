@@ -35,6 +35,6 @@ const sequelizeDB = {};
 sequelizeDB.Sequelize = Sequelize;
 sequelizeDB.sequelize = sequelize;
 
-sequelizeDB.Team = require("./Team")(sequelize,Sequelize);
+sequelizeDB.users = require("./users")(sequelize,Sequelize);
 
 module.exports = sequelizeDB;
